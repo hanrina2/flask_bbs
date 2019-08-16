@@ -16,4 +16,4 @@
 *.rtf	 diff=astextplain
 *.RTF	 diff=astextplain
 
-.css linguist-language=Python
+*.css linguist-language=python
