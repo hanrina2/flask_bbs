@@ -1,0 +1,5 @@
+.idea
+top.log.txt
+*.pyc
+secret.py
+database_secret.conf

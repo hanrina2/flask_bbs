@@ -1,0 +1,17 @@
+{% extends "topic/base.html" %}
+{% block title %}信箱{% endblock %}
+{% block main %}
+<div id="content">
+    <div class="panel">
+        <div class='header topic_header'>
+            <p>发件人: {{ sender.username }}</p>
+            <p>收件人: {{ receiver.username }}</p>
+            <p class="col_fade">发送时间 {{ message.created_time | format_time }}</p>
+            <div class='inner topic'>
+                <div class='topic_content'>{{ message.content }}</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

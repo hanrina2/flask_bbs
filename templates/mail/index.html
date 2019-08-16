@@ -1,0 +1,44 @@
+{% extends "topic/base.html" %}
+{% block title %}消息{% endblock %}
+{% block main %}
+<div id="content">
+    <div class="panel">
+        <div class="header">
+            <p>发送私信</p>
+            <form method="post" action="{{ url_for('.add',token=token) }}">
+                <input type="text" name="title" placeholder="title">
+                <input type="text" name="content" placeholder="content">
+                <input type="text" name="username" placeholder="username">
+                <button type="submit">发送私信</button>
+            </form>
+
+            <div class="panel">
+                <div class="header">
+                    <span class="col_fade">收到私信</span>
+                </div>
+                {% for r in received %}
+                <div class="cell">
+                    <div class="topic_title_wrapper">
+                        <a class="topic_title" href="{{ url_for('.view', id = r.id) }}"> {{ r.title }}</a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="panel">
+                <div class="header">
+                    <span class="col_fade">发送私信</span>
+                </div>
+                {% for s in send %}
+                <div class="cell">
+                    <div class="topic_title_wrapper">
+                        <a class="topic_title" href="{{ url_for('.view', id = s.id) }}"> {{ s.title }}</a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
