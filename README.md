@@ -14,3 +14,4 @@
 
 
 # 演示
+![image](https://github.com/hanrina2/flask_bbs/blob/master/flask_bbs.gif)
